@@ -1,7 +1,7 @@
 import {ethers, JsonRpcProvider} from "ethers";
 import {initFhevm, createInstance, getPublicKeyCallParams} from "fhevmjs";
 
-let instance;
+let fhevm_instance;
 
 
 export const provider = new JsonRpcProvider(`https://devnet.zama.ai/`);
@@ -16,8 +16,8 @@ export const createFhevmInstance = async () => {
     const decoded = ethers.AbiCoder.defaultAbiCoder().decode(["bytes"], ret);
     const publicKey = decoded[0];
 
-    // 3. Create the instance
-    instance = await createInstance({chainId, publicKey});
+    // 3. Create the fhevm_instance
+    fhevm_instance = await createInstance({chainId, publicKey});
 };
 
 export const init = async () => {
@@ -26,7 +26,7 @@ export const init = async () => {
 };
 
 export const getInstance = () => {
-    return instance
+    return fhevm_instance
 }
 
 export const getSignature = async (contractAddress, privateKey) => {

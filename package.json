@@ -11,7 +11,8 @@
   "dependencies": {
     "ethers": "^6.12.1",
     "express": "^4.19.2",
-    "fhevmjs": "^0.4.0"
+    "fhevmjs": "^0.4.0",
+    "morgan": "^1.10.0"
   },
   "type": "module"
 }

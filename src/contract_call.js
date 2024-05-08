@@ -65,12 +65,12 @@ export async function mint(address, amount) {
     const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, wallet)
 
     try {
-        await contract.mint(amount, address)
-        console.log("mint成功")
+        let response = await contract.mint(amount, address)
+        console.log("mint成功:" + response.hash)
         return true
     } catch (e) {
-        console.error(e)
         console.log("mint失败")
+        console.error(e)
     }
     return false
 

@@ -7,7 +7,7 @@ export const ABI = [
     "function mint(uint64 amount, address to)"
 ]
 
-export const CONTRACT_ADDRESS = "0xe2962b0eADb0B2b62Ebf73AFF534Aa76A56f1c6c"
+export const CONTRACT_ADDRESS = "0x16456979482cC0EFFaF04b6eEb05BCA5aba09250"
 
 export const SERVER_PORT = process.env.SERVER_PORT? process.env.SERVER_PORT:8081
 

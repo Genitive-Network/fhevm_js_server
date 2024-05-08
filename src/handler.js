@@ -3,7 +3,6 @@ import {ADMINISTRATOR_PRIVATE_KEY} from "./config.js";
 
 
 export async function balanceGetHandler(req, res) {
-    console.log("/balance GET 请求")
     const data = {
         balance : Number(await balanceOf(ADMINISTRATOR_PRIVATE_KEY))
     }
@@ -11,8 +10,8 @@ export async function balanceGetHandler(req, res) {
 }
 
 export async function mintPostHandler(req, res) {
-    console.log("/mint POST 请求");
-
+    console.log("/mint POST 请求body:");
+    console.log(req.body)
     try {
         let address = req.body.address
         let amount = req.body.amount

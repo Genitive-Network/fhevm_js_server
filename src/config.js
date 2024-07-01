@@ -10,6 +10,3 @@ export const ABI = [
 export const CONTRACT_ADDRESS = "0x16456979482cC0EFFaF04b6eEb05BCA5aba09250"
 
 export const SERVER_PORT = process.env.SERVER_PORT? process.env.SERVER_PORT:8081
-
-
-console.log(SERVER_PORT)

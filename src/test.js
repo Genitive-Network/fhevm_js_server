@@ -11,7 +11,7 @@ function buf2hex(buffer) { // buffer is an ArrayBuffer
 await init()
 
 // let encryptedData = getInstance().encrypt64(99);
-let encryptedData = getInstance().encryptAddress("0xDbb6F44FA2bDb55c45A4B4119C163f9c42Ac5630");
+let encryptedData = getInstance().encryptAddress("0x5E4ac25605b79C9cfE3F7cECBA0c78Ff7455DF84");
 console.log(encryptedData)
 let x = buf2hex(encryptedData);
 console.log(x)

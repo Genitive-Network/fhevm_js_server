@@ -92,7 +92,9 @@ async function test() {
         await mint("0x6D8a1b1Ba7ce3844704c67b45f6B05E0bB4e536e", 5)
     }
 
-    testBalnace()
-    testMint()
-    testTransfer()
+    await testBalnace()
+    await testMint()
+    // testTransfer()
 }
+
+await test();
